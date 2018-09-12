@@ -37,3 +37,16 @@ file_in = "test1.png"
 img = Image.open(file_in)
 file_out = "test1.bmp"
 img.save(file_out)
+
+
+
+
+Tkinter：如何指定视窗的位置
+使用Tkinter写视窗程式，是可以指定视窗出现的位置的。我们可以利用geometry()这个member function：
+import tkinter as tk 
+root = tk.Tk() 
+root.geometry()    #会显示例如300x200+100+50的字串，意思是宽=300、高=200、x=100、y=50
+root.geometry( '300x200+10+5') #宽高不变，(x, y)改成(10, 5)
+也可以写一个小function来处理：
+def setxy(w, x, y): 
+    w.geometry('{0}+{1}+{2}'.format(w.geometry().split('+')[0], x, y) )
