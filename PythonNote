@@ -25,3 +25,7 @@ bmp.CreateCompatibleBitmap(srcdc, width, height)
 memdc.SelectObject(bmp)
 memdc.BitBlt((0, 0), (width, height), srcdc, (left, top), win32con.SRCCOPY)
 bmp.SaveBitmapFile(memdc, 'screenshot.bmp')
+
+只截取一个屏幕
+https://github.com/python-pillow/Pillow/issues/1547
+
