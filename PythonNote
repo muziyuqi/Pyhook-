@@ -29,3 +29,11 @@ bmp.SaveBitmapFile(memdc, 'screenshot.bmp')
 只截取一个屏幕
 https://github.com/python-pillow/Pillow/issues/1547
 
+
+图像类型转换
+# convert a .png image file to a .bmp image file using PIL
+from PIL import Image
+file_in = "test1.png"
+img = Image.open(file_in)
+file_out = "test1.bmp"
+img.save(file_out)
