@@ -1,5 +1,8 @@
 
 
+字符串替换
+\ xa0实际上是Latin1（ISO 8859-1）中的非破坏空间，也是chr（160）。你应该用空格替换它。
+ string = string.replace(u'\xa0', u' ')
 
 
 屏幕截图
